@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 int main(){
-    int r1,r2,c1,c2,x,y;
+    int r1,r2,c1,c2,x,y,z;
     printf("enter the number of rows and column for matrix A:\t");
     scanf("%d%d",&r1,&c1);
     printf("enter the number of rows and column for matrix B:\t");
@@ -23,18 +23,21 @@ int main(){
           { printf("enter element at (%d,%d) for matrix B\t",x,y);
             scanf("%d",&B[x][y]);
           }
-           }
+           }  
         for (x=0;x<r1;x++)
-        {   product[x][y]=0;
-            for (y=0;y<c2;y++)
-        {
-            product[x][y]+=A[x][y]*B[y][x];
-            printf("the element at (%d,%d) for product %d \n",x,y,product[x][y]);
-        }}
+        { for (y=0;y<c2;y++)
+            {product[x][y]=0;
+           for (z=0;z<c1;z++)
+            {
+             product[x][y]+=A[x][z]*B[z][y];
+            }}}
         
+
     }
-
-
+        for (x=0;x<r1;x++)
+        { for (y=0;y<c2;y++)
+             { printf("the element at (%d,%d) for product %d \n",x,y,product[x][y]);}
+        }
 
 
 
