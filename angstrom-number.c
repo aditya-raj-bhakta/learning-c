@@ -20,8 +20,6 @@ int main()
        else {break;}
     }
 
-
-
     //checking condition
     if(angstrom==num)
     {printf("angstrom");}
