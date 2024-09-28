@@ -13,7 +13,7 @@ int main()
     }
     if (i==0)
      {
-         printf("given number is prime");
+         printf("given number is prime\n");
      }
 
 
